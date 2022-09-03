@@ -31,10 +31,10 @@ if (color === Color.blue) {
 //Any
 let anyThing = [undefined, 1, "2", true];
 //Type Assertions
-const email = document.getElementById("email");
-if (email) { // do this or
-    email === null || email === void 0 ? void 0 : email.addEventListener("change", e => {
-        const input = e.currentTarget; //remove this
-        console.log(input.value); // this will complain 
-    });
-}
+// const email = document.getElementById("email")
+// if (email) {        // do this or
+//   email?.addEventListener("change", e => { // or add the ? sign
+//    const input = e.currentTarget as HTMLInputElement //remove this
+//   console.log(input.value) // this will complain 
+// })
+// }

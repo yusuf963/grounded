@@ -34,11 +34,10 @@ if (color === Color.blue) {
 let anyThing: any[] = [undefined, 1, "2", true]
 
 //Type Assertions
-const email = document.getElementById("email")
-if (email) {        // do this or
-  email?.addEventListener("change", e => { // or add the ? sign
-   const input = e.currentTarget as HTMLInputElement //remove this
-  console.log(input.value) // this will complain 
-})
-}
-
+// const email = document.getElementById("email")
+// if (email) {        // do this or
+//   email?.addEventListener("change", e => { // or add the ? sign
+//    const input = e.currentTarget as HTMLInputElement //remove this
+//   console.log(input.value) // this will complain 
+// })
+// }

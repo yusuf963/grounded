@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "server": "nodemon -w dist -q ./dist/lib/index.js",
+    "all": "npx concurrently -n COMPILER,NODEMON -c green,blue \"npx tsc -w\" \"npm run server\"",
+    "all1": "npx tsc -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^2.0.19",
     "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
   }
 }

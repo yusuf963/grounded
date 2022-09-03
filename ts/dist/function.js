@@ -11,9 +11,9 @@ const myFunc1 = (a, b) => {
 const sumAll = (arg1, ...numbers) => {
     return numbers.reduce((a, b) => a + b, 0);
 };
-function calcArea(...args) {
+const calcArea = (a, ...args) => {
     if (args.length === 2) {
         return args[0] * args[1];
     }
     return Math.pow(args[0], 2);
-}
+};
