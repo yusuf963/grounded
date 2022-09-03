@@ -18,3 +18,23 @@ const myMap = new Map;
 const addNumber = (a, b) => {
     console.log("adding");
 };
+var Color;
+(function (Color) {
+    Color["red"] = "red";
+    Color["green"] = "green";
+    Color["blue"] = "blue";
+})(Color || (Color = {}));
+const color = Color.blue;
+if (color === Color.blue) {
+    console.log("your color is blue");
+}
+//Any
+let anyThing = [undefined, 1, "2", true];
+//Type Assertions
+const email = document.getElementById("email");
+if (email) { // do this or
+    email === null || email === void 0 ? void 0 : email.addEventListener("change", e => {
+        const input = e.currentTarget; //remove this
+        console.log(input.value); // this will complain 
+    });
+}
