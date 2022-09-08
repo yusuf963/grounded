@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+// const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -40,6 +41,7 @@ module.exports = {
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin(),
+    // new Visualizer()
   ],
 };
 
