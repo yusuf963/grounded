@@ -1,12 +1,17 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from "react";
 
-interface AppStateValue {
+interface IAppStateValue {
   cart: {
-    items: { id: number; name: string; price: number; quantity: number }[];
+    items: {
+      id: number;
+      name: string;
+      price: number;
+      quantity: number;
+    }[];
   };
 }
 
-const defaultStateValue: AppStateValue = {
+const defaultStateValue: IAppStateValue = {
   cart: {
     items: [],
   },
@@ -15,14 +20,14 @@ const defaultStateValue: AppStateValue = {
 export const AppStateContext = createContext(defaultStateValue);
 
 export const AppSetStateContext = createContext<
-  React.Dispatch<React.SetStateAction<AppStateValue>> | undefined
+  React.Dispatch<React.SetStateAction<IAppStateValue>> | undefined
 >(undefined);
 
 export const useSetState = () => {
   const setState = useContext(AppSetStateContext);
   if (!setState) {
     throw new Error(
-      'useSetState was called outside of the AppSetStateContext provider'
+      "useSetState was called outside of the AppSetStateContext provider"
     );
   }
   return setState;
